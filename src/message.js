@@ -8,7 +8,7 @@ const { PORT, NODE_ENV } = process.env;
 
 const app = express();
 
-cron.schedule("36 13 * * *", sendEmail, { timezone: "Africa/Lagos" });
+cron.schedule("55 13 * * *", sendEmail, { timezone: "Africa/Lagos" });
 
 app.listen(PORT, () => {
   console.log(`Server running in ${NODE_ENV} on port ${PORT}`);
