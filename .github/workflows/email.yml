@@ -2,7 +2,7 @@ name: Michael Study Reminder
 
 on:
   schedule:
-    - cron: "56 14 * * *"
+    - cron: "00 15 * * *"
   workflow_dispatch:
 
 jobs:
