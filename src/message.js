@@ -28,3 +28,4 @@ if (process.env.RUN_CRON === "true") {
   app.listen(PORT, () => {
     console.log(`Server running in ${NODE_ENV} on port ${PORT}`);
 });
+};
