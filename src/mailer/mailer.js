@@ -335,7 +335,7 @@ export const sendEmail = async () => {
     </body>
     </html>`,
     });
-    console.log("All messages sent successfully including your reminder.");
+    return console.log("All messages sent successfully including your reminder.");
   } catch (error) {
     console.error("Error sending mail: ", error);
     return {
