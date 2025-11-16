@@ -1,26 +1,30 @@
 import "dotenv/config";
 
 import express from "express";
-import cron from "node-cron";
+// import cron from "node-cron";
 import { sendEmail } from "../src/mailer/mailer.js";
 
 const { PORT, NODE_ENV } = process.env;
 
 const app = express();
 
-cron.schedule("00 00 16 * * *", sendEmail, { timezone: "Africa/Lagos" });
+// cron.schedule("00 00 16 * * *", sendEmail, { timezone: "Africa/Lagos" });
 
-app.listen(PORT, () => {
-  console.log(`Server running in ${NODE_ENV} on port ${PORT}`);
+if (process.env.RUN_CRON === "true") {
   console.log(
-    `Server deployed on ${new Date().toLocaleTimeString(["WAT"], {
-      day: "2-digit",
-      month: "long",
-      year: "numeric",
-      hour: "2-digit",
-      minute: "2-digit",
-      second: "numeric",
-      hour12: true,
-    })}`
-  );
+       `Server turned on ${new Date().toLocaleTimeString(["WAT"], {
+        day: "2-digit",
+        month: "long",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "numeric",
+        hour12: true,
+      })}`
+    );
+  await sendEmail();
+  process.exit(0);
+} else {
+  app.listen(PORT, () => {
+    console.log(`Server running in ${NODE_ENV} on port ${PORT}`);
 });
