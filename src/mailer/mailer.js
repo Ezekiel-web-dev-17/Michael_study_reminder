@@ -355,4 +355,3 @@ export const sendEmail = async () => {
     };
   }
 };
-sendEmail();
