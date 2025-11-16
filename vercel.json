@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "src/message.js": {
+      "runtime": "nodejs22.x"
+    }
+  }
+}
