@@ -8,7 +8,7 @@ const { PORT, NODE_ENV } = process.env;
 
 const app = express();
 
-cron.schedule("00 20 18 * * *", sendEmail, { timezone: "Africa/Lagos" });
+cron.schedule("00 35 18 * * *", sendEmail, { timezone: "Africa/Lagos" });
 
 if (process.env.RUN_CRON === "true") {
   console.log(
