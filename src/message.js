@@ -2,7 +2,7 @@ import "dotenv/config";
 
 import express from "express";
 import cron from "node-cron";
-import { sendEmail } from "./mailer/mailer.js";
+import { sendEmail } from "../src/mailer/mailer.js";
 
 const { PORT, NODE_ENV } = process.env;
 
