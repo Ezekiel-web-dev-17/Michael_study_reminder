@@ -286,8 +286,7 @@ const mailJSON = [
       You've done really well. But it ain't over yet. One last battle to win.
     </p>
     <p>
-      Revise what you've learnt.If you've forgotten anything that's your last
-      demon. Don't feel bad just study it again that way you are building the
+      Revise what you've learnt.If you've forgotten anything don't feel bad just study it again that way you are building the
       muscles of your Brain and that's how to win in this battle. BRAIN POWER!!
       Let's rock and roll.
       </p>
@@ -356,3 +355,4 @@ export const sendEmail = async () => {
     };
   }
 };
+sendEmail();
