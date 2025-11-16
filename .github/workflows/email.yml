@@ -26,4 +26,6 @@ jobs:
           MAIL_USER: ${{ secrets.MAIL_USER }}
           MAIL_PASS: ${{ secrets.MAIL_PASS }}
           MAIL_TO: ${{ secrets.MAIL_TO }}
+          NODE_ENV: ${{ secrets.NODE_ENV }}
+          PORT: ${{ secrets.PORT }}
         run: node src/message.js
