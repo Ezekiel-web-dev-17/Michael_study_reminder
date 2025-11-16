@@ -1,14 +1,14 @@
 import "dotenv/config";
 
 import express from "express";
-// import cron from "node-cron";
+import cron from "node-cron";
 import { sendEmail } from "../src/mailer/mailer.js";
 
 const { PORT, NODE_ENV } = process.env;
 
 const app = express();
 
-// cron.schedule("00 00 16 * * *", sendEmail, { timezone: "Africa/Lagos" });
+cron.schedule("00 00 18 * * *", sendEmail, { timezone: "Africa/Lagos" });
 
 if (process.env.RUN_CRON === "true") {
   console.log(
