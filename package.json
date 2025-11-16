@@ -4,6 +4,9 @@
   "description": "",
   "main": "message.js",
   "type": "module",
+  "builds": [
+    { "src": "src/message.js", "use": "@vercel/node" }
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
